@@ -11,38 +11,39 @@ database = 'saas_churn_project'
 # Create connection
 engine = create_engine(f'postgresql://{username}:{password}@{host}:{port}/{database}')
 
-# Load data from the churn_data table
+# Load data
 query = "SELECT * FROM churn_data"
 df = pd.read_sql(query, engine)
 
 print("\nPreview of raw data:")
 print(df.head())
 
-# Step 1: Handle missing values
-
-# Numeric columns with median
+# Handle missing values
 df['MonthlyCharges'] = df['MonthlyCharges'].fillna(df['MonthlyCharges'].median())
 df['TotalCharges'] = df['TotalCharges'].fillna(df['TotalCharges'].median())
 df['UserRating'] = df['UserRating'].fillna(df['UserRating'].median())
 
-# Categorical columns with mode
 cat_cols = ['SubscriptionType', 'PaymentMethod', 'DeviceRegistered',
             'GenrePreference', 'Gender', 'SubtitlesEnabled']
-
 for col in cat_cols:
     df[col] = df[col].fillna(df[col].mode()[0])
 
-# Final missing values check
-print("\n Missing values handled. Verifying:\n")
-print(df.isnull().sum())
+# Final check
+print("\nMissing values handled:\n", df.isnull().sum())
+print(f"\nCleaned data shape: {df.shape}")
 
-# Optional: print cleaned shape
-print(f"\n Cleaned data shape: {df.shape}")
-
-print("\nColumns after lowercase transformation:")
-print(df.columns.tolist())
-
-# Save cleaned data back to PostgreSQL
+# Save cleaned data
 df.to_sql('cleaned_churn_data', engine, if_exists='replace', index=False)
+print("\n Cleaned data saved to 'cleaned_churn_data'")
 
-print("\n Cleaned data saved to table 'cleaned_churn_data'")
+# ----------- SCALING TO 10,000 USERS ------------------
+
+# ✅ Sample 10,000 rows with replacement from cleaned data
+scaled_df = df.sample(n=10000, replace=True, random_state=42).reset_index(drop=True)
+
+# ✅ Multiply MonthlyCharges by 15 to simulate premium pricing
+scaled_df['MonthlyCharges'] = scaled_df['MonthlyCharges'] * 15
+
+# ✅ Save to PostgreSQL
+scaled_df.to_sql('scaled_churn_data', engine, if_exists='replace', index=False)
+print(" Scaled data (10,000 users with boosted MonthlyCharges) saved to 'scaled_churn_data'")

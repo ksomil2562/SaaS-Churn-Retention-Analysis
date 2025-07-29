@@ -1,5 +1,12 @@
 # 📉 **SaaS Churn & Retention Analysis** using Python, PostgreSQL & Tableau
 
+**Database** - https://docs.google.com/spreadsheets/d/1UNLlBi0oOWOiLXJjt69CC2KfWN9LgIjY/edit?usp=sharing&ouid=105730006396819032037&rtpof=true&sd=true
+
+**Dashboard** - https://public.tableau.com/views/SaaSDashboard_17537232833950/Dashboard?:language=enUS&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+
+<img width="1545" height="505" alt="image" src="https://github.com/user-attachments/assets/718afebb-157e-4656-8e9e-bf2f1232aee2" />
+
+
 <img width="1280" height="620" alt="A_CORRELATION" src="https://github.com/user-attachments/assets/492b882e-2c5c-4af1-a472-eee555c9ca6e" />
 
 ![saas](https://github.com/user-attachments/assets/6c0d1555-553f-48c3-b846-fa44606bfa88)

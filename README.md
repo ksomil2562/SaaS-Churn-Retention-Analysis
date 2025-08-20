@@ -4,7 +4,6 @@
 
 **Dashboard** - https://public.tableau.com/views/SaaSDashboard_17537232833950/Dashboard?:language=enUS&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
 
-<img width="1545" height="505" alt="image" src="https://github.com/user-attachments/assets/718afebb-157e-4656-8e9e-bf2f1232aee2" />
 
 
 ![saas](https://github.com/user-attachments/assets/6c0d1555-553f-48c3-b846-fa44606bfa88)

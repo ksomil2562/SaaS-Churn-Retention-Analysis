@@ -27,7 +27,7 @@
 |-------------------------------|--------------------------|
 | **Dataset Size**              | 10,000 users             |
 | **Churn Rate Before Strategy** | 17.59%                   |
-| **Users Targeted for Retention** | 2,111 (High Risk Segment) |
+| **Users Targeted for Retention** | 1,917 (High Risk Segment) |
 | **Users Retained**             | 900+                     |
 | **Churn Rate After Strategy**  | 8.59% (↓ ~9%)            |
 | **Projected Monthly Gain**     | ₹1.8 Lakhs+ (INR)        |

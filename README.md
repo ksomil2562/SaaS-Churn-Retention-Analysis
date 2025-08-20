@@ -7,8 +7,6 @@
 <img width="1545" height="505" alt="image" src="https://github.com/user-attachments/assets/718afebb-157e-4656-8e9e-bf2f1232aee2" />
 
 
-<img width="1280" height="620" alt="A_CORRELATION" src="https://github.com/user-attachments/assets/492b882e-2c5c-4af1-a472-eee555c9ca6e" />
-
 ![saas](https://github.com/user-attachments/assets/6c0d1555-553f-48c3-b846-fa44606bfa88)
 
 ---
